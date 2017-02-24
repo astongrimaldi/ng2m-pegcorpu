@@ -1,3 +1,7 @@
+import { PageLayoutComponent } from './layout/page-layout/page-layout.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { LayoutModule } from './layout/layout.module';
+import { PagesModule } from './pages/pages.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { RouterModule } from '@angular/router';
 import { FooterModule } from './shared/footer/footer.module';
@@ -18,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminLayoutComponent,
+    PageLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavbarModule,
     FooterModule,
     DashboardModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    PagesModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
