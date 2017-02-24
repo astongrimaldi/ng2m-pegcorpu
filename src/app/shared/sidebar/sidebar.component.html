@@ -1,0 +1,32 @@
+<div class="logo">
+    <a href="http://www.pegadaian.co.id" class="simple-text">
+        <div class="logo-img">
+            <img src="/assets/img/logo-pg.png" />
+        </div>
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <div class="nav-container">
+        <ul class="nav">
+            <li routerLinkActive="active">
+                <a [routerLink]="[menuItems[0].path]">
+                    <i class="{{menuItems[0].icon}}"></i>
+                    <p data-toggle="collapse" href="#collapse1">{{menuItems[0].title}}</p>
+                </a>
+            </li>
+            <div id="collapse1" class="panel-collapse collapse">
+                <ul class="list-group">
+                    <li class="list-group-item">One</li>
+                    <li class="list-group-item">Two</li>
+                    <li class="list-group-item">Three</li>
+                </ul>
+            </div>
+            <li routerLinkActive="active">
+                <a [routerLink]="[menuItems[2].path]">
+                    <i class="{{menuItems[2].icon}}"></i>
+                    <p>{{menuItems[2].title}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
